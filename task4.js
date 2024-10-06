@@ -18,6 +18,8 @@ async function getData() {
   }
 }
 
+// async function putData() {}
+
 renderButton.addEventListener("click", (e) => {
   let userId = parseInt(inputBody.value.trim());
   e.preventDefault();
