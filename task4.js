@@ -40,7 +40,16 @@ function getUserId(userId) {
     container.appendChild(userBody);
   } else {
     console.log(`Post with ID ${userId} not found.`);
+    getError(userId);
   }
+}
+
+function getError(userId) {
+  container.innerHTML = "";
+  let userTitle = document.createElement("h2");
+  userTitle.style.textAlign = "center";
+  userTitle.textContent = `Post with ID ${userId} not found.`;
+  container.appendChild(userTitle);
 }
 
 getData();
